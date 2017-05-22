@@ -1,0 +1,18 @@
+{% extends 'ElephantlyStaticContentBundle::layout.html.twig' %}
+
+{% block view %}
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <h3>Static Content Create</h3>
+                <form class="" action="{{ path('elephantly_static_content_update', {'id': static_content.id }) }}" method="POST">
+                    {{ form_row(form) }}
+                    <div class="float-right">
+                        <a href="{{ path('elephantly_static_content_index') }}">Cancel</a>
+                        <input type="submit" name="create" value="Create">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
