@@ -1,0 +1,13 @@
+{% extends 'ElephantlyStaticContentBundle::layout.html.twig' %}
+
+{% block view %}
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <h3>Static Content</h3>
+                <span>{{ static_content.slug }}</span> :
+                <span>{{ static_content.value }}</span>
+            </div>
+        </div>
+    </div>
+{% endblock %}

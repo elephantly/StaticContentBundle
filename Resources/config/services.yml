@@ -1,0 +1,8 @@
+parameters:
+    elephantly.static.request_listener.class: Elephantly\StaticContentBundle\EventListener\RequestListener
+services:
+    elephantly.static.request_listener:
+        class: %elephantly.static.request_listener.class%
+        arguments: [@twig, @elephantly.static_content.repository]
+        tags:
+            - { name: kernel.event_listener, event: kernel.request }

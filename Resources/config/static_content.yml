@@ -1,0 +1,4 @@
+elephantly_resource:
+    resources:
+        static_content:
+            class: Elephantly\StaticContentBundle\Entity\StaticContent

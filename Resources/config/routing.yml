@@ -1,0 +1,35 @@
+elephantly_static_content_create:
+    path: /edit
+    defaults:
+        _controller: elephantly.static_content.controller:createAction
+        _elephantly:
+            template: ElephantlyStaticContentBundle::create.html.twig
+            redirect: elephantly_static_content_show
+
+elephantly_static_content_update:
+    path: /edit/{id}
+    defaults:
+        _controller: elephantly.static_content.controller:updateAction
+        _elephantly:
+            template: ElephantlyStaticContentBundle::update.html.twig
+
+elephantly_static_content_index:
+    path: /
+    defaults:
+        _controller: elephantly.static_content.controller:indexAction
+        _elephantly:
+            template: ElephantlyStaticContentBundle::index.html.twig
+
+elephantly_static_content_delete:
+    path: /delete/{id}
+    defaults:
+        _controller: elephantly.static_content.controller:deleteAction
+        _elephantly:
+            redirect: elephantly_static_content_index
+
+elephantly_static_content_show:
+    path: /{id}
+    defaults:
+        _controller: elephantly.static_content.controller:showAction
+        _elephantly:
+            template: ElephantlyStaticContentBundle::show.html.twig
