@@ -13,7 +13,7 @@
     "require": {
         "php": "^5.3",
         "symfony/framework-bundle": "^2.7",
-        "elephantly/resource-bundle": "^0.0.2"
+        "elephantly/resource-bundle": ">=0.0.2"
     },
     "require-dev": {
 
