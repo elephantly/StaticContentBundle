@@ -22,7 +22,7 @@
         "bin-dir": "bin"
     },
     "autoload": {
-        "psr-4": { "Elephantly\\StaticContentBundle\\": "" },
+        "psr-4": { "Elephantly\\StaticContentBundle\\": "" }
     },
     "autoload-dev": {
     },
