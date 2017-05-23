@@ -4,27 +4,29 @@
     <div class="container">
         <div class="row">
             <div class="column">
-                <h3>Static Contents</h3>
-                <div class="float-right">
-                    <a href="{{path('elephantly_static_content_create')}}">Create</a>
+                <div class="wrapper">
+                    <h3>Static Contents</h3>
+                    <div class="float-right">
+                        <a href="{{path('elephantly_static_content_create')}}">Create</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Slug</th>
+                            <th>Value</th>
+                            <th>Actions</th>
+                        </tr>
+                        {% for static_content in static_contents %}
+                        <tr>
+                            <td>{{ static_content.slug }}</td>
+                            <td>{{ static_content.value }}</td>
+                            <td>
+                                <a class="button" href="{{path('elephantly_static_content_update', {'id':static_content.id} )}}">Edit</a>
+                                <a class="button" href="{{path('elephantly_static_content_delete', {'id':static_content.id} )}}">Delete</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </table>
                 </div>
-                <table>
-                    <tr>
-                        <th>Slug</th>
-                        <th>Value</th>
-                        <th>Actions</th>
-                    </tr>
-                    {% for static_content in static_contents %}
-                    <tr>
-                        <td>{{ static_content.slug }}</td>
-                        <td>{{ static_content.value }}</td>
-                        <td>
-                            <a class="button" href="{{path('elephantly_static_content_update', {'id':static_content.id} )}}">Edit</a>
-                            <a class="button" href="{{path('elephantly_static_content_delete', {'id':static_content.id} )}}">Delete</a>
-                        </td>
-                    </tr>
-                    {% endfor %}
-                </table>
             </div>
         </div>
     </div>
