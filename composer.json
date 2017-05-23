@@ -1,0 +1,37 @@
+{
+    "name": "elephantly/static-content-bundle",
+    "type": "symfony-bundle",
+    "description": "A bundle to handle static content and insert them in twig",
+    "keywords": ["bundle", "resource", "static", "content"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexandre Lalung",
+            "email": "lalung.alexandre@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^5.3",
+        "symfony/framework-bundle": "^2.7",
+        "elephantly/resource-bundle": "^0.1"
+    },
+    "require-dev": {
+
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-4": { "Elephantly\\StaticContentBundle\\": "" },
+    },
+    "autoload-dev": {
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-install-cmd": [
+        ],
+        "post-update-cmd": [
+        ]
+    }
+}
