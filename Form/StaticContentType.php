@@ -33,7 +33,7 @@ class StaticContentType extends AbstractType
             return;
         }
 
-        if($staticContent->getCreatedAt()){
+        if($staticContent->getCreatedAt() < strtotime('1 hour ago')){
             $view->children['slug']->vars['read_only'] = true;
         }
     }
